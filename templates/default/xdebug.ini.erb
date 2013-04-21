@@ -1,0 +1,8 @@
+; configuration for php xdebug module
+zend_extension=<%= %x[find /usr/lib/php5 -name 'xdebug.so' 2> /dev/null] %>
+xdebug.default_enable=1
+xdebug.remote_enable=1
+xdebug.remote_handler=dbgp
+xdebug.remote_host=<%= @remote_host %>
+xdebug.remote_port=<%= @remote_port %>
+xdebug.remote_autostart=0
